@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+    background: #05050a;
+    color: #00ffcc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.cyber-container {
+    background: rgba(10, 10, 25, 0.9);
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* BRANDING & LOGO GRAPHIC STYLES */
+.sur-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.logo-graphic {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 0 8px #ff0055);
+}
+
+.neon-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-circle {
+    fill: none;
+    stroke: #ff0055;
+    stroke-width: 2;
+    stroke-dasharray: 6;
+    animation: rotateCircle 20s linear infinite;
+    transform-origin: center;
+}
+
+.logo-wave {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transform-origin: center;
+}
+
+.wave-1 {
+    stroke: #00ffcc;
+    animation: wavePulse 2s ease-in-out infinite alternate;
+}
+
+.wave-2 {
+    stroke: #7f00ff;
+    animation: wavePulse 2s ease-in-out infinite alternate-reverse;
+}
+
+.logo-core {
+    fill: #00ffcc;
+    box-shadow: 0 0 10px #00ffcc;
+    animation: coreGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* LOGO TEXT */
+.neon-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #fff;
+    text-shadow: 0 0 10px #ff0055, 0 0 30px #ff0055;
+    line-height: 1;
+}
+
+.neon-logo span {
+    font-size: 1rem;
+    color: #00ffcc;
+    text-shadow: none;
+    letter-spacing: normal;
+}
+
+.subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* CONTROLS & INTERFACE */
+.input-box {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+select, textarea {
+    width: 100%;
+    background: #000;
+    border: 1px solid #ff0055;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+#quantumGenBtn {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    letter-spacing: 2px;
+}
+
+#quantumGenBtn:hover {
+    background: #00ffcc;
+    color: #000;
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+/* TELEMETRY MATRIX */
+.telemetry-section {
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.matrix-card {
+    background: #000;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.neon-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.visualizer-container {
+    background: #000;
+    border: 1px solid #00ffcc;
+    height: 150px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#playbackBtn {
+    width: 100%;
+    padding: 12px;
+    background: #ff0055;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.warning-text {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hidden { display: none; }
+
+/* LOGO ANIMATIONS */
+@keyframes rotateCircle {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes wavePulse {
+    from { transform: scale(0.9) rotate(0deg); opacity: 0.6; }
+    to { transform: scale(1.1) rotate(5deg); opacity: 1; }
+}
+
+@keyframes coreGlow {
+    from { r: 5; opacity: 0.7; }
+    to { r: 7; opacity: 1; }
+}

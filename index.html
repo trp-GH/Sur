@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sur - Quantum AI Music Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cyber-container">
+        <header>
+            <div class="sur-logo-container">
+                <div class="logo-graphic">
+                    <svg viewBox="0 0 100 100" class="neon-svg">
+                        <circle cx="50" cy="50" r="45" class="logo-circle" />
+                        <path d="M30 50 Q 40 20, 50 50 T 70 50" class="logo-wave wave-1" />
+                        <path d="M30 50 Q 40 80, 50 50 T 70 50" class="logo-wave wave-2" />
+                        <circle cx="50" cy="50" r="6" class="logo-core" />
+                    </svg>
+                </div>
+                <div class="neon-logo">SUR <span>v2.0</span></div>
+            </div>
+            <p class="subtitle">World's First Synthesizer That Translates Lyrics Sentiment into Real-Time Ragas</p>
+        </header>
+
+        <section class="control-panel">
+            <div class="input-box">
+                <label>🌐 Linguistic Engine</label>
+                <select id="langCore">
+                    <option value="multilingual">Global/Auto-Detect (Hindi, English, Punjabi, Spanish...)</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>✍️ Input Lyrics Matrix</label>
+                <textarea id="lyricsMatrix" placeholder="Type or paste your lyrics here... (e.g., 'Dil mein khushi ka ehsaas hai' or 'The night is dark and lonely')"></textarea>
+            </div>
+
+            <button id="quantumGenBtn">🧠 INITIALIZE AI MUSIC SYNTHESIS</button>
+        </section>
+
+        <section id="telemetrySection" class="telemetry-section hidden">
+            <div class="matrix-grid">
+                <div class="matrix-card">
+                    <h4>🎭 Sentiment Detected</h4>
+                    <div id="sentimentOutput" class="neon-text">Analyzing...</div>
+                </div>
+                <div class="matrix-card">
+                    <h4>🎼 Assigned Scale / Raga</h4>
+                    <div id="ragaOutput" class="neon-text">Mapping Frequencies...</div>
+                </div>
+            </div>
+
+            <div class="visualizer-container">
+                <canvas id="visualizerCanvas"></canvas>
+            </div>
+
+            <div class="audio-controls">
+                <button id="playbackBtn">🛑 Stop Frequency</button>
+                <p class="warning-text">⚠️ Note: This audio is generated inside your browser's core from mathematics, not a pre-recorded file.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
