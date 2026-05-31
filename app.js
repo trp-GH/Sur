@@ -6,18 +6,28 @@ let visualizerAnimation = null;
 const emotionalMatrix = {
     happy: {
         keywords: ['happy', 'khushi', 'pyaar', 'love', 'muskurana', 'dance', 'nacho', 'celebrate', 'fiesta'],
-        ragaName: "Bhairavi / Major Pentatonic (Joyous)",
-        frequencies: [261.63, 293.66, 329.63, 392.00, 440.00] // C, D, E, G, A
+        ragaName: "Raga Bilawal / Hamsadhwani (Joyous & Bright)",
+        frequencies: [261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88] // Shuddha Swaras (Like C Major Scale)
     },
     sad: {
-        keywords: ['sad', 'dard', 'lonely', 'akela', 'rona', 'tears', 'dark', 'judai', 'gam', 'triste'],
-        ragaName: "Shivaranjani / Minor Pentatonic (Melancholic)",
-        frequencies: [261.63, 293.66, 311.13, 392.00, 440.00] // C, D, D#, G, A
+        keywords: ['sad', 'dard', 'lonely', 'akela', 'rona', 'tears', 'dark', 'judai', 'gam', 'triste', 'karuna'],
+        ragaName: "Raga Bhairavi (Pathos, Virah & Melancholy)",
+        frequencies: [261.63, 277.18, 311.13, 349.23, 392.00, 415.30, 466.16] // Komal Re, Ga, Dha, Ni (Deeply emotional)
     },
-    spiritual: {
-        keywords: ['god', 'bhagwan', 'shanti', 'peace', 'om', 'prayer', 'sukoon', 'spirit', 'universe'],
-        ragaName: "Yaman / Lydian Scale (Spiritual Meditative)",
-        frequencies: [261.63, 293.66, 329.63, 369.99, 392.00, 440.00, 493.88] // C, D, E, F#, G, A, B
+    romantic: {
+        keywords: ['romantic', 'dil', 'shayar', 'beautiful', 'humsafar', 'chaand', 'eyes', 'beautiful', 'ishq'],
+        ragaName: "Raga Yaman (Romantic & Evening Melodies)",
+        frequencies: [261.63, 293.66, 329.63, 369.99, 392.00, 440.00, 493.88] // Teevra Ma (F#) - Creating longing and love
+    },
+    peaceful: {
+        keywords: ['god', 'bhagwan', 'shanti', 'peace', 'om', 'prayer', 'sukoon', 'spirit', 'universe', 'calm'],
+        ragaName: "Raga Ahir Bhairav (Peaceful & Meditative Morning)",
+        frequencies: [261.63, 277.18, 329.63, 349.23, 392.00, 440.00, 466.16] // Komal Re and Komal Ni (Very serene)
+    },
+    energetic: {
+        keywords: ['power', 'energy', 'run', 'fight', 'josh', 'kranti', 'power', 'fast', 'drums'],
+        ragaName: "Raga Desh / Kafi (Energetic, Folk & Patriotic)",
+        frequencies: [261.63, 293.66, 349.23, 392.00, 440.00, 466.16] // Bold intervals for movement
     }
 };
 
